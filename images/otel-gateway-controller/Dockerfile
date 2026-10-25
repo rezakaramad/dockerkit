@@ -9,6 +9,6 @@ COPY builder-config.yaml .
 RUN CGO_ENABLED=0 builder --config=builder-config.yaml
 
 FROM gcr.io/distroless/static-debian12:nonroot
-COPY --from=build /src/_build/otelcol-gateway /otelcol-gateway
-ENTRYPOINT ["/otelcol-gateway"]
+COPY --from=build /src/_build/otel-gateway-controller /otel-gateway-controller
+ENTRYPOINT ["/otel-gateway-controller"]
 CMD ["--config=/etc/otelcol/config.yaml"]

@@ -1,5 +1,5 @@
 dist:
-  name: otelcol-gateway
+  name: otel-gateway-controller
   description: Tenant-aware OTLP gateway for Loki, Mimir and Tempo
   version: 0.163.0
   output_path: ./_build
